@@ -1,0 +1,30 @@
+.title {
+   font-size: 44px;
+   font-weight: 700;
+   line-height: 60/44 * 100%;
+   @media (max-width: $media3 +px) {
+      font-size: 32px;
+      letter-spacing: 1px;
+      // line-height: 36px;
+   }
+}
+
+.text {
+   font-size: 16px;
+   line-height: 23/16 * 100%;
+}
+
+.bluebg {
+   position: relative;
+   overflow: hidden;
+   &::after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: -120px;
+      width: 40%;
+      height: 100%;
+      @include transformRotate(18deg);
+      background-image: linear-gradient(198deg, rgba(0, 115, 151, 0.9999999999999999) 0%, rgba(0, 115, 151, 0) 100%);
+   }
+}
